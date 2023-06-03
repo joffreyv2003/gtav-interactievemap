@@ -1,0 +1,41 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Oriental bioscoop",
+        "imgname":"assets/images/bioscoop/oriental.png",
+        "ptype": "Movie bioscoop"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [3939.5, 2802.5]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tivoli Cinema",
+        "imgname":"assets/images/bioscoop/tivoli.png",
+        "ptype": "Movie bioscoop"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2816.5, 2529.5]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ten Cent bioscoop",
+        "imgname":"assets/images/bioscoop/tencent.png",
+        "ptype": "Movie bioscoop"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4011, 2198.5]
+      }
+    }
+  ]
+}

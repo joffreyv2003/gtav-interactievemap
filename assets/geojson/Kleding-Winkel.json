@@ -1,0 +1,184 @@
+{
+  "type": "FeatureCollection",
+  "features": [{
+      "type": "Feature",
+      "properties": {
+        "name": "Mission Row Binco kleding",
+        "imgname":"assets/images/kleding/missionrow.png",
+        "ptype": "kleding Store"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4036, 2137.65]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Vespucci Canals Binco kleding",
+        "imgname":"assets/images/kleding/vespuccicanals.png",
+        "ptype": "kleding Store"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [3216, 1961]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Vespucci Movie Masks",
+        "imgname":"assets/images/kleding/moviemasks.png",
+        "ptype": "kleding Store"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2880, 1827]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Strawberry Discount kleding",
+        "imgname":"assets/images/kleding/strawberry.png",
+        "ptype": "kleding Store"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [3809.5, 1749.5]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Grapeseed Discount kleding",
+        "imgname":"assets/images/kleding/grapeseed.png",
+        "ptype": "kleding Store"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4870.25, 5847.5]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Great Chaparral Discount kleding",
+        "imgname":"assets/images/kleding/greatchaparral.png",
+        "ptype": "kleding Store"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [3032, 4448]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Harmony Discount kleding",
+        "imgname":"assets/images/kleding/harmonydiscount.png",
+        "ptype": "kleding Store"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4545.5, 4452.25]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Paleto Bay Discount kleding",
+        "imgname":"assets/images/kleding/paletobay.png",
+        "ptype": "kleding Store"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [3758.25, 6962.75]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Del Perro Suburban kleding",
+        "imgname":"assets/images/kleding/delperro.jpg",
+        "ptype": "kleding Store"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2961, 2158]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Harmony Suburban kleding",
+        "imgname":"assets/images/kleding/harmony.png",
+        "ptype": "kleding Store"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4163.5, 4481.75]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hawick Suburban kleding",
+        "imgname":"assets/images/kleding/hawick.jpg",
+        "ptype": "kleding Store"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [3841.5, 2527.5]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Chumash Suburban kleding",
+        "imgname":"assets/images/kleding/chumash.png",
+        "ptype": "kleding Store"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [1666.875, 3366]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Rockford Hills Ponsonbys kleding",
+        "imgname":"assets/images/kleding/rockfordhills.png",
+        "ptype": "kleding Store"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [3285, 2565.625]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Morningwood Ponsonbys kleding",
+        "imgname":"assets/images/kleding/morningwood.png",
+        "ptype": "kleding Store"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2810, 2490]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Burton Ponsonbys kleding",
+        "imgname":"assets/images/kleding/burton.png",
+        "ptype": "kleding Store"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [3650.75, 2469.25]
+      }
+    }
+  ]
+}

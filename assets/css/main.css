@@ -1,0 +1,63 @@
+.leaflet-popup-content-wrapper {
+    background-color: gray;
+}
+
+.leaflet-control-layers-toggle {
+    background-color: white !important;
+    border: none;
+}
+
+.leaflet-control-layers-expanded {
+    background-image: linear-gradient(to right, orange , yellow);
+    background-size: 100%;
+    transition-property: opacity;
+    transition-duration: 1s;
+}
+
+.leaflet-popup-tip {
+    background-color: gray;
+    opacity: 0%;
+}
+
+.leaflet-popup-close-button {
+    background-color: rgb(0, 0, 0);
+    opacity: 100%;
+}
+
+.popupImage {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.popupImage:hover {
+    transform: scale(3);
+    opacity: 1 !important;
+    border-style: solid;
+    border-color: gray;
+    border-width: 2px;
+    z-index: 1000 !important;
+}
+
+.icon {
+    display: block;
+    color: white;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.gtav {
+    margin: 0 auto;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body,
+#map {
+    height: 100%;
+    width: 100%;
+}

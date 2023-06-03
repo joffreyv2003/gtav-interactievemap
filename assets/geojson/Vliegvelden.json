@@ -1,0 +1,53 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sandy Shores Airfield",
+        "imgname":"assets/images/hangarhelipad/sandyshores.jpg",
+        "ptype": "Hanger/Helipad"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4900, 4844.25]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Los Santos Airport",
+        "imgname":"assets/images/hangarhelipad/sandyshores.jpg",
+        "ptype": "Hanger/Helipad"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2834.5, 700.5]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Los Santos Airport",
+        "imgname":"assets/images/hangarhelipad/sandyshores.jpg",
+        "ptype": "Hanger/Helipad"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2312, 4730]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Los Santos Airport",
+        "imgname":"assets/images/hangarhelipad/sandyshores.jpg",
+        "ptype": "Hanger/Helipad"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5100, 5800]
+      }
+    }
+  ]
+}

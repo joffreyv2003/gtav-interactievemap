@@ -1,0 +1,108 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Garage 1",
+          "imgname":"assets/images/bioscoop/oriental.png",
+          "ptype": "Garage"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [4200.5, 2802.5]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Garage 1",
+          "imgname":"assets/images/bioscoop/oriental.png",
+          "ptype": "Garage"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [3940, 2445]
+        }
+      }
+      ,
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Garage 1",
+          "imgname":"assets/images/bioscoop/oriental.png",
+          "ptype": "Garage"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [3157, 2566]
+        }
+      }
+      ,
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Garage 1",
+          "imgname":"assets/images/bioscoop/oriental.png",
+          "ptype": "Garage"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [3527, 2150]
+        }
+      }
+      ,
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Garage 1",
+          "imgname":"assets/images/bioscoop/oriental.png",
+          "ptype": "Garage"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [3900, 2142]
+        }
+      }
+      ,
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Garage 1",
+          "imgname":"assets/images/bioscoop/oriental.png",
+          "ptype": "Garage"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [3764, 1958]
+        }
+      }
+      ,
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Garage 1",
+          "imgname":"assets/images/bioscoop/oriental.png",
+          "ptype": "Garage"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [4431, 2153]
+        }
+      }
+      ,
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Garage 1",
+          "imgname":"assets/images/bioscoop/oriental.png",
+          "ptype": "Garage"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [4339, 2636]
+        }
+      }
+    ]
+  }
+  

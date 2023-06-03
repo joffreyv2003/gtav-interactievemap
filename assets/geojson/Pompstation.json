@@ -1,0 +1,210 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Oriental bioscoop",
+          "imgname":"assets/images/bioscoop/oriental.png",
+          "ptype": "Movie bioscoop"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [3280, 2048]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Oriental bioscoop",
+          "imgname":"assets/images/bioscoop/oriental.png",
+          "ptype": "Movie bioscoop"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [2810, 2480]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Oriental bioscoop",
+          "imgname": "assets/images/bioscoop/oriental.png",
+          "ptype": "Movie bioscoop"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [3930.25, 1830.75]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Oriental bioscoop",
+          "imgname": "assets/images/bioscoop/oriental.png",
+          "ptype": "Movie bioscoop"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [4520.5, 2445.5]
+        }
+      }
+      ,
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Oriental bioscoop",
+          "imgname": "assets/images/bioscoop/oriental.png",
+          "ptype": "Movie bioscoop"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [3709, 1546]
+        }
+      }
+      ,
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Oriental bioscoop",
+          "imgname": "assets/images/bioscoop/oriental.png",
+          "ptype": "Movie bioscoop"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [4550, 1743]
+        }
+      }
+      ,
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Oriental bioscoop",
+          "imgname": "assets/images/bioscoop/oriental.png",
+          "ptype": "Movie bioscoop"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [5449, 2920]
+        }
+      }
+      ,
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Oriental bioscoop",
+          "imgname": "assets/images/bioscoop/oriental.png",
+          "ptype": "Movie bioscoop"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [5432, 4370]
+        }
+      }
+      ,
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Oriental bioscoop",
+          "imgname": "assets/images/bioscoop/oriental.png",
+          "ptype": "Movie bioscoop"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [5069, 5153]
+        }
+      }
+      ,
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Oriental bioscoop",
+          "imgname": "assets/images/bioscoop/oriental.png",
+          "ptype": "Movie bioscoop"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [3911, 4378]
+        }
+      }
+      ,
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Oriental bioscoop",
+          "imgname": "assets/images/bioscoop/oriental.png",
+          "ptype": "Movie bioscoop"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [2372, 2454]
+        }
+      }
+      ,
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Oriental bioscoop",
+          "imgname": "assets/images/bioscoop/oriental.png",
+          "ptype": "Movie bioscoop"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [2077, 4200]
+        }
+      }
+      ,
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Oriental bioscoop",
+          "imgname": "assets/images/bioscoop/oriental.png",
+          "ptype": "Movie bioscoop"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [3862, 7010]
+        }
+      }
+      ,
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Oriental bioscoop",
+          "imgname": "assets/images/bioscoop/oriental.png",
+          "ptype": "Movie bioscoop"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [4881, 6889]
+        }
+      }
+      ,
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Oriental bioscoop",
+          "imgname": "assets/images/bioscoop/oriental.png",
+          "ptype": "Movie bioscoop"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [5522, 4824]
+        }
+      }
+      ,
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Oriental bioscoop",
+          "imgname": "assets/images/bioscoop/oriental.png",
+          "ptype": "Movie bioscoop"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [4872, 5912]
+        }
+      }
+    ]
+  }
+  

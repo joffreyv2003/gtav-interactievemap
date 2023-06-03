@@ -1,0 +1,41 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Trevor's House",
+        "imgname":"assets/images/veiligshuis/trevor.png",
+        "ptype": "veiligshuis"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5057, 5180.5]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Michael's House",
+        "imgname":"assets/images/veiligshuis/michael.png",
+        "ptype": "veiligshuis"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [3221,2778]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Franklin's House",
+        "imgname":"assets/images/veiligshuis/franklin.jpg",
+        "ptype": "veiligshuis"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [3716,1713]
+      }
+    }
+  ]
+}

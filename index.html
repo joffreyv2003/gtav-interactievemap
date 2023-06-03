@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang='en'>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+    integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+    crossorigin=""></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="./assets/css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<title>GTA V Interactieve Map | DIGSIGN2</title>
+
+<body style="background-color:#143d6b">
+
+  <div id="map" style="width: 100%; height: 100%;background-color:#143d6b;">
+  </div>
+  <script>
+    // Maak de map aan
+    var map = L.map('map', {
+      crs: L.CRS.Simple,
+      minZoom: -3,
+      maxBoundsViscosity: 1.0
+    });
+    var bounds = [
+      [0, 0],
+      [8192, 8192]
+    ];
+    // Scan elke laag van de map (Verschillende soorten)
+    var satellite = L.imageOverlay('assets/images/GTAV_SATELLITE_8192x8192.png', bounds).addTo(map);
+    var atlas = L.imageOverlay('assets/images/gtav.png', bounds)
+    var road = L.imageOverlay('assets/images/GTAV_ROADMAP_8192x8192.png', bounds)
+    map.fitBounds(bounds);
+    map.setMaxBounds(bounds)
+
+    // Laad elke laag met geoJson (De gegevens van de plek)
+    var wapenwinkel = L.geoJson(null, {
+      pointToLayer: function (feature, latlng) {
+        //Creëer een icon voor de plaats
+        var icn = L.icon({
+          iconUrl: 'assets/icons/wapenwinkel.png',
+          iconSize: [36, 36], // Grootte van de icon
+        });
+        var marker = L.marker(latlng, {
+          icon: icn
+        });
+        marker.bindPopup("<font color=white><h4>" + feature.properties.name + '</h4>' + "<img src='" + feature.properties.imgname + "' class='popupImage'></font>");
+        return marker;
+      }
+    })
+    $.getJSON("assets/geojson/Wapen-Winkel.json", function (data) {
+      wapenwinkel.addData(data).addTo(map);
+    });
+
+    var wapenwinkelschiet = L.geoJson(null, {
+      pointToLayer: function (feature, latlng) {
+        //Creëer een icon voor de plaats
+        var icn = L.icon({
+          iconUrl: 'assets/icons/wapenwinkelschiet.png',
+          iconSize: [36, 36],
+        });
+        var marker = L.marker(latlng, {
+          icon: icn
+        });
+        marker.bindPopup("<font color=white><h4>" + feature.properties.name + '</h4>' + "<img src='" + feature.properties.imgname + "' class='popupImage'></font>");
+        return marker;
+      }
+    })
+    $.getJSON("assets/geojson/Wapen-Winkel-Schiet.json", function (data) {
+      wapenwinkelschiet.addData(data);
+    });
+
+    var kapper = L.geoJson(null, {
+      pointToLayer: function (feature, latlng) {
+        //Creëer een icon voor de plaats
+        var icn = L.icon({
+          iconUrl: 'assets/icons/kapper.png',
+          iconSize: [36, 36],
+        });
+        var marker = L.marker(latlng, {
+          icon: icn
+        });
+        marker.bindPopup("<font color=white><h4>" + feature.properties.name + '</h4>' + "<img src='" + feature.properties.imgname + "' class='popupImage'></font>");
+        return marker;
+      }
+    })
+    $.getJSON("assets/geojson/Kapper.json", function (data) {
+      kapper.addData(data);
+    });
+
+    var repareer = L.geoJson(null, {
+      pointToLayer: function (feature, latlng) {
+        //Creëer een icon voor de plaats
+        var icn = L.icon({
+          iconUrl: 'assets/icons/repareerwinkel.png',
+          iconSize: [36, 36],
+        });
+        var marker = L.marker(latlng, {
+          icon: icn
+        });
+        marker.bindPopup("<font color=white><h4>" + feature.properties.name + '</h4>' + "<img src='" + feature.properties.imgname + "' class='popupImage'></font>");
+        return marker;
+      }
+    })
+    $.getJSON("assets/geojson/Repareer-Winkel.json", function (data) {
+      repareer.addData(data);
+    });
+
+    var kleding = L.geoJson(null, {
+      pointToLayer: function (feature, latlng) {
+        //Creëer een icon voor de plaats
+        var icn = L.icon({
+          iconUrl: 'assets/icons/kledingwinkel.png',
+          iconSize: [36, 36],
+        });
+        var marker = L.marker(latlng, {
+          icon: icn
+        });
+        marker.bindPopup("<font color=white><h4>" + feature.properties.name + '</h4>' + "<img src='" + feature.properties.imgname + "' class='popupImage'></font>");
+        return marker;
+      }
+    })
+    $.getJSON("assets/geojson/Kleding-Winkel.json", function (data) {
+      kleding.addData(data);
+    });
+
+    var skilift = L.geoJson(null, {
+      pointToLayer: function (feature, latlng) {
+        //Creëer een icon voor de plaats
+        var icn = L.icon({
+          iconUrl: 'assets/icons/skilift.png',
+          iconSize: [36, 36],
+        });
+        var marker = L.marker(latlng, {
+          icon: icn
+        });
+        marker.bindPopup("<font color=white><h4>" + feature.properties.name + '</h4>' + "<img src='" + feature.properties.imgname + "' class='popupImage'></font>");
+        return marker;
+      }
+    })
+    $.getJSON("assets/geojson/Skilift.json", function (data) {
+      skilift.addData(data);
+    });
+
+    var skydive = L.geoJson(null, {
+      pointToLayer: function (feature, latlng) {
+        //Creëer een icon voor de plaats
+        var icn = L.icon({
+          iconUrl: 'assets/icons/skydiving.png',
+          iconSize: [36, 36],
+        });
+        var marker = L.marker(latlng, {
+          icon: icn
+        });
+        marker.bindPopup("<font color=white><h4>" + feature.properties.name + '</h4>' + "<img src='" + feature.properties.imgname + "' class='popupImage'></font>");
+        return marker;
+      }
+    })
+    $.getJSON("assets/geojson/Skydiving.json", function (data) {
+      skydive.addData(data);
+    });
+
+    var wasstraat = L.geoJson(null, {
+      pointToLayer: function (feature, latlng) {
+        //Creëer een icon voor de plaats
+        var icn = L.icon({
+          iconUrl: 'assets/icons/wasstraat.png',
+          iconSize: [36, 36],
+        });
+        var marker = L.marker(latlng, {
+          icon: icn
+        });
+        marker.bindPopup("<font color=white><h4>" + feature.properties.name + '</h4>' + "<img src='" + feature.properties.imgname + "' class='popupImage'></font>");
+        return marker;
+      }
+    })
+    $.getJSON("assets/geojson/Wasstraat.json", function (data) {
+      wasstraat.addData(data);
+    });
+
+    var garage = L.geoJson(null, {
+      pointToLayer: function (feature, lat1ng) {
+        //Creëer een icon voor de plaats
+        var icn = L.icon({
+          iconUrl: 'assets/icons/garage.png',
+          iconSize: [36, 36],
+        });
+        var marker = L.marker(lat1ng, {
+          icon: icn
+        });
+        marker.bindPopup("<font color=white><h4>" + feature.properties.name + '</h4>' + "<img src='" + feature.properties.imgname + "' class='popupImage'></font>");
+        return marker;
+      }
+    })
+    $.getJSON("assets/geojson/Garage.json", function (data) {
+      garage.addData(data);
+    })
+
+    var tattoowinkel = L.geoJson(null, {
+      pointToLayer: function (feature, latlng) {
+        //Creëer een icon voor de plaats
+        var icn = L.icon({
+          iconUrl: 'assets/icons/tattoowinkel.png',
+          iconSize: [36, 36],
+        });
+        var marker = L.marker(latlng, {
+          icon: icn
+        });
+        marker.bindPopup("<font color=white><h4>" + feature.properties.name + '</h4>' + "<img src='" + feature.properties.imgname + "' class='popupImage'></font>");
+        return marker;
+      }
+    })
+    $.getJSON("assets/geojson/Tattoo-Winkel.json", function (data) {
+      tattoowinkel.addData(data);
+    });
+
+    var tennis = L.geoJson(null, {
+      pointToLayer: function (feature, latlng) {
+        //Creëer een icon voor de plaats
+        var icn = L.icon({
+          iconUrl: 'assets/icons/tennis.png',
+          iconSize: [36, 36],
+        });
+        var marker = L.marker(latlng, {
+          icon: icn
+        });
+        marker.bindPopup("<font color=white><h4>" + feature.properties.name + '</h4>' + "<img src='" + feature.properties.imgname + "' class='popupImage'></font>");
+        return marker;
+      }
+    })
+    $.getJSON("assets/geojson/Tennis.json", function (data) {
+      tennis.addData(data);
+    });
+
+    var reuzenrad = L.geoJson(null, {
+      pointToLayer: function (feature, latlng) {
+        //Creëer een icon voor de plaats
+        var icn = L.icon({
+          iconUrl: 'assets/icons/reuzenrad.png',
+          iconSize: [36, 36],
+        });
+        var marker = L.marker(latlng, {
+          icon: icn
+        });
+        marker.bindPopup("<font color=white><h4>" + feature.properties.name + '</h4>' + "<img src='" + feature.properties.imgname + "' class='popupImage'></font>");
+        return marker;
+      }
+    })
+    $.getJSON("assets/geojson/Reuzenrad.json", function (data) {
+      reuzenrad.addData(data);
+    });
+
+    var golf = L.geoJson(null, {
+      pointToLayer: function (feature, latlng) {
+        //Creëer een icon voor de plaats
+        var icn = L.icon({
+          iconUrl: 'assets/icons/golf.png',
+          iconSize: [36, 36],
+        });
+        var marker = L.marker(latlng, {
+          icon: icn
+        });
+        marker.bindPopup("<font color=white><h4>" + feature.properties.name + '</h4>' + "<img src='" + feature.properties.imgname + "' class='popupImage'></font>");
+        return marker;
+      }
+    })
+    $.getJSON("assets/geojson/Golf.json", function (data) {
+      golf.addData(data);
+    });
+
+    var vliegveld = L.geoJson(null, {
+      pointToLayer: function (feature, latlng) {
+        //Creëer een icon voor de plaats
+        var icn = L.icon({
+          iconUrl: 'assets/icons/vliegveld.png',
+          iconSize: [36, 36],
+        });
+        var marker = L.marker(latlng, {
+          icon: icn
+        });
+        marker.bindPopup("<font color=white><h4>" + feature.properties.name + '</h4>' + "<img src='" + feature.properties.imgname + "' class='popupImage'></font>");
+        return marker;
+      }
+    })
+    $.getJSON("assets/geojson/Vliegvelden.json", function (data) {
+      vliegveld.addData(data);
+    });
+
+    var veiligshuis = L.geoJson(null, {
+      pointToLayer: function (feature, latlng) {
+        //Creëer een icon voor de plaats
+        var icn = L.icon({
+          iconUrl: 'assets/icons/veiligshuis.png',
+          iconSize: [36, 36],
+        });
+        var marker = L.marker(latlng, {
+          icon: icn
+        });
+        marker.bindPopup("<font color=white><h4>" + feature.properties.name + '</h4>' + "<img src='" + feature.properties.imgname + "' class='popupImage'></font>");
+        return marker;
+      }
+    })
+    $.getJSON("assets/geojson/Veiligshuis.json", function (data) {
+      veiligshuis.addData(data);
+    });
+
+    var triathalon = L.geoJson(null, {
+      pointToLayer: function (feature, latlng) {
+        //Creëer een icon voor de plaats
+        var icn = L.icon({
+          iconUrl: 'assets/icons/triathalon.png',
+          iconSize: [36, 36],
+        });
+        var marker = L.marker(latlng, {
+          icon: icn
+        });
+        marker.bindPopup("<font color=white><h4>" + feature.properties.name + '</h4>' + "<img src='" + feature.properties.imgname + "' class='popupImage'></font>");
+        return marker;
+      }
+    })
+    $.getJSON("assets/geojson/Triathalon.json", function (data) {
+      triathalon.addData(data);
+    });
+
+    var bioscoop = L.geoJson(null, {
+      pointToLayer: function (feature, latlng) {
+        //Creëer een icon voor de plaats
+        var icn = L.icon({
+          iconUrl: 'assets/icons/bioscoop.png',
+          iconSize: [36, 36],
+        });
+        var marker = L.marker(latlng, {
+          icon: icn
+        });
+        marker.bindPopup("<font color=white><h4>" + feature.properties.name + '</h4>' + "<img src='" + feature.properties.imgname + "' class='popupImage'></font>");
+        return marker;
+      }
+    })
+    $.getJSON("assets/geojson/Bioscoop.json", function (data) {
+      bioscoop.addData(data);
+    });
+
+    var pompstation = L.geoJson(null, {
+      pointToLayer: function (feature, latlng) {
+        //Creëer een icon voor de plaats
+        var icn = L.icon({
+          iconUrl: 'assets/icons/pompstation.png',
+          iconSize: [48, 48],
+        });
+        var marker = L.marker(latlng, {
+          icon: icn
+        });
+        marker.bindPopup("<font color=white><h4>" + feature.properties.name + '</h4>' + "<img src='" + feature.properties.imgname + "' class='popupImage'></font>");
+        return marker;
+      }
+    })
+    $.getJSON("assets/geojson/Pompstation.json", function (data) {
+      pompstation.addData(data);
+    });
+
+    var stripclub = L.geoJson(null, {
+      pointToLayer: function (feature, latlng) {
+        //Creëer een icon voor de plaats
+        var icn = L.icon({
+          iconUrl: 'assets/icons/stripclub.png',
+          iconSize: [36, 36],
+        });
+        var marker = L.marker(latlng, {
+          icon: icn
+        });
+        marker.bindPopup("<font color=white><h4>" + feature.properties.name + '</h4>' + "<img src='" + feature.properties.imgname + "' class='popupImage'></font>");
+        return marker;
+      }
+    })
+    $.getJSON("assets/geojson/Strip Club.json", function (data) {
+      stripclub.addData(data);
+    });
+
+    var race = L.geoJson(null, {
+      pointToLayer: function (feature, latlng) {
+        //Creëer een icon voor de plaats
+        var icn = L.icon({
+          iconUrl: 'assets/icons/race.png',
+          iconSize: [36, 36],
+        });
+        var marker = L.marker(latlng, {
+          icon: icn
+        });
+        marker.bindPopup("<font color=white><h4>" + feature.properties.name + '</h4>' + "<img src='" + feature.properties.imgname + "' class='popupImage'></font>");
+        return marker;
+      }
+    })
+    $.getJSON("assets/geojson/Race.json", function (data) {
+      race.addData(data);
+    });
+
+    //Creëer titels voor elke plaats (popup)
+    var overlay = {
+      "<img src='assets/icons/wapenwinkel.png'align='center'width='30' height='30' /> Wapen Winkel": wapenwinkel,
+      "<img src='assets/icons/wapenwinkelschiet.png'align='center'width='30' height='30'/> Wapen Winkel/Schietbaan": wapenwinkelschiet,
+      "<img src='assets/icons/pompstation.png'align='center'width='30' height='30'/> Pompstation": pompstation,
+      "<img src='assets/icons/kapper.png'align='center'width='30' height='30'/> Kapper": kapper,
+      "<img src='assets/icons/repareerwinkel.png'align='center'width='30' height='30'/> Repareer Winkel": repareer,
+      "<img src='assets/icons/kledingwinkel.png'align='center'width='30' height='30'/> Kleding Winkel": kleding,
+      "<img src='assets/icons/skilift.png'align='center'width='30' height='30'/> Skilift": skilift,
+      "<img src='assets/icons/skydiving.png'align='center'width='30' height='30'/> Skydiving": skydive,
+      "<img src='assets/icons/wasstraat.png'align='center'width='30' height='30'/> Wasstraat": wasstraat,
+      "<img src='assets/icons/garage.png'align='center'width='30' height='30'/> Garage": garage,
+      "<img src='assets/icons/bioscoop.png'align='center'width='30' height='30'/> Bioscoop": bioscoop,
+      "<img src='assets/icons/tattoowinkel.png'align='center'width='30' height='30'/> Tattoo Winkel": tattoowinkel,
+      "<img src='assets/icons/tennis.png'align='center'width='30' height='30'/> Tennis": tennis,
+      "<img src='assets/icons/reuzenrad.png'align='center'width='30' height='30'/> Reuzenrad": reuzenrad,
+      "<img src='assets/icons/golf.png'align='center'width='30' height='30'/> Golf": golf,
+      "<img src='assets/icons/vliegveld.png'align='center'width='30' height='30'/> Vliegveld": vliegveld,
+      "<img src='assets/icons/veiligshuis.png'align='center'width='30' height='30'/> Veiligshuis": veiligshuis,
+      "<img src='assets/icons/triathalon.png'align='center'width='30' height='30'/> Triathalon": triathalon,
+      "<img src='assets/icons/stripclub.png'align='center'width='30' height='30'/> Strip Club": stripclub,
+      "<img src='assets/icons/race.png'align='center'width='30' height='30'/> Race": race
+    };
+    //Creëer titels voor elke soort map
+    var baseLayers = {
+      "Satelliet": satellite,
+      "Atlas": atlas,
+      "Wegen": road,
+    }
+
+    //Creëer controle laag
+    var over = L.control.layers(baseLayers, overlay, {
+      collapsed: true,
+      sortLayers: true
+    }).addTo(map);
+
+    // Voeg het GTA V logo toe aan de linkerkant (onderkant)
+    L.Control.Watermark = L.Control.extend({
+      onAdd: function (map) {
+
+        var img = L.DomUtil.create('img', 'gtav');
+        img.src = 'assets/images/logo.png';
+        img.style.width = '200px';
+        return img;
+      }
+    });
+    L.control.watermark = function (opts) {
+      return new L.Control.Watermark(opts);
+    }
+    // Voeg het logo toe
+    L.control.watermark({
+      position: 'bottomleft'
+    }).addTo(map);
+
+
+    // Wanneer de map veranderd, verander de achtergrond kleur ook
+    // om de achtergrondkleur te matchen
+    map.on('baselayerchange', function (layer) {
+      if (layer.name == "Wegen") {
+        document.getElementById("map").style.background = "#1862ad";
+      }
+      if (layer.name == "Satelliet") {
+        document.getElementById("map").style.background = "#143d6b";
+      }
+      if (layer.name == "Atlas") {
+        document.getElementById("map").style.background = "#0fa8d2";
+      }
+    });
+  </script>
+</body>
+
+</html>
